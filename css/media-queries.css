@@ -1,0 +1,315 @@
+/*Medium device (MD)*/
+
+@media (max-width: 1199px) {
+
+
+
+}	
+
+/*Small device (SD)*/
+
+@media (max-width: 991px) {
+
+	
+
+}	
+
+/*Extra small device (XS)*/
+
+@media (max-width: 768px) {	
+
+	.headerWide{
+
+		padding: 15px 0;
+
+	}
+
+	.stepsWide{
+
+		padding: 24px 0;
+
+	}
+
+	h2{
+
+		font-size: 28px;
+
+		line-height: 35px;
+
+	}
+
+	.steps h2{
+
+		margin-bottom: 24px;
+
+	}
+
+	.steps p{
+
+		font-size: 18px;
+
+		line-height: 28px;
+
+	}
+
+	.steps p span.marker{
+
+		font-size: 24px;
+
+		min-width: 50px;
+
+		min-height: 50px;
+
+		padding: 14px 0;
+
+		margin: 8px 0;
+
+	}
+
+	a.btnLarge, a.btnLarge:hover, a.btnLarge:focus, .btnLarge, .btnLarge:hover, .btnLarge:focus{
+
+		padding: 7px 58px !important;
+
+	}
+
+	.formAreaWide{
+
+		padding: 24px 0;
+
+	}
+
+	.testimonial{
+
+		text-align: center;
+
+	}
+
+	.testimonialFace{
+
+		float: none;
+
+		width: 100%;
+
+		margin: 0;
+
+	}
+
+	.testimonialText{
+
+		float: none;
+
+		width: 100%;
+
+		margin-left: auto;
+
+		margin-right: auto;
+
+	}
+
+	.footerWide{
+
+		padding: 15px 0;
+
+	}
+
+	.tourContent{
+
+		padding: 10px 0;
+
+	}
+
+	.tourText{
+
+		padding: 10px 24px;
+
+	}
+
+	/* carousel related styles */
+
+	.carousel {
+
+    	height: 390px;
+
+	}
+
+	.carousel-caption {
+
+		left: 0;
+
+		padding: 10px;
+
+		position: absolute;
+
+		width: 100%;
+
+	}
+
+	.carousel-caption h3{
+
+		font-size: 24px;
+
+		line-height: 28px;
+
+	}
+
+	.carousel-caption p{
+
+		font-size: 16px;
+
+	}
+
+	.carousel-caption span.newLine{
+
+		display: inline;
+
+	}
+
+	
+
+	.leftAdjacentList,
+
+	.rightAdjacentList{
+
+		padding-left: 15px;
+
+		padding-right: 15px;
+
+	}
+
+	.tempchange{
+
+		border-bottom: 1px solid #d6d6d6 !important;
+
+	}
+
+	.massageLeft,
+
+	.massageRight{
+
+		text-align: center;
+
+	}
+
+	.massageRight .generalButton{
+
+		margin-left: auto;
+
+	}
+
+	.soapRight h3{
+
+		margin-top: 24px;
+
+	}
+
+	.massageSoapRight h3,
+
+	.massageSoapRight p{
+
+		max-width: 500px;
+
+	}
+
+	.RMTAOHeroWide h3{
+
+		margin-top: 180px;
+
+		margin-bottom: 10px;
+
+	}
+	.ebookBanner {
+		display:block;
+		margin:0 auto 17px;
+	}
+	.eBookWide h2 {
+		text-align: center;
+	}
+
+}
+
+/*Extra small device (XS-More refine)*/
+
+@media (max-width: 480px) {	
+
+	input.copyPasteCode[type="text"]{
+
+		min-width: 288px;
+
+	}
+
+	.testimonialText h4 span{
+
+		margin-bottom: 15px;
+
+	}
+
+	.tourWide,
+
+	.offersWide {
+
+		padding: 15px 0;
+
+	}
+
+	/* carousel related styles */
+
+	.carousel {
+
+    	height: 290px;
+
+	}
+
+	.carousel-caption p{
+
+		font-size: 14px;
+
+	}
+
+	img.logo{
+
+		margin-bottom: 15px;
+
+		margin-top: 15px;
+
+		display: block !important;
+
+		float: none !important;
+
+	}
+
+	p.getToKnow a{
+
+		margin-left: 2px;
+
+		margin-right: 2px;
+
+	}
+
+	.Star{
+
+		margin-left: 2px;
+
+		margin-right: 2px;
+
+	}
+
+	img.star{
+
+		width: 24px;
+
+		height: 24px;
+
+	}
+
+	.RMTAOHeroWide h3{
+
+		margin-top: 132px;
+
+	}
+
+}
+
+
+
+
+

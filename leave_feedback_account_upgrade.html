@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leave Feedback | ClinicSense</title>
+<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+
+<!-- Bootstrap CSS-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!-- Custom CSS -->
+<link href="css/global-style.css" rel="stylesheet" type="text/css">
+<!-- Media queries CSS -->
+<link href="css/media-queries.css" rel="stylesheet" type="text/css">
+<!-- Owl carousel -->
+<link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+
+</head>
+<body>
+<!-- Wrapper start -->
+<div class="wrapper">
+
+	<!-- Header -->
+	<header class="wide headerWide clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header text-center">
+						<a href="#" title="Clinic Sense"><img src="img/logo.png" alt="ClinicSense" class="logo img-responsive" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+	
+	<!-- Banner Section start -->
+	<div class="wide heroWide clearfix">
+		<img src="img/bannerImages/leave_feedback.jpg" alt="" class="heroImg img-responsive" />
+	</div>
+	<!-- Banner Section end -->
+	
+	<!-- Extend Trial -->
+	<div class="wide generalTrialWide feedbackWide accountUpgradeWide clearfix">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="generalTrial notInterested text-center account_upgrade">
+						<h4>we’d love to hear your feedback!</h4>
+						<p>Send us your feedback of ClinicSense and we’ll upgrade your account FREE for 2 months!</p>
+						<h3>what you’ll get</h3>
+						<p class="subHead">Everything on the solo plan, <span class="strongText">plus:</span></p>
+						<div class="planListWrap">
+							<div class="row">
+								<div class="col-sm-6 leftAdjacentList">
+									<div class="planList">
+										<div class="planFeatures">
+											<ul class="tinySizeList">
+												<li>Automated Rebooking Requests</li>
+												<li>Send Email Campaigns to Clients</li>
+												<li>Send Holiday Promotions</li>
+												<li>Prepaid Appointments</li>
+											</ul>
+										</div>
+									</div>	
+								</div>
+								<div class="col-sm-6 rightAdjacentList">
+									<div class="planList">
+										<div class="planFeatures">
+											<ul class="tinySizeList">
+												<li>Sell & Manage Gift Certificates</li>
+												<li>Automatic Birthday Emails</li>
+												<li>Text Message Appointment Reminders</li>
+												<li>Credit Card Capture To Hold Appointment</li>
+											</ul>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Extend Trial -->
+	
+	<!-- Upgrade Account form -->
+	<div class="account_upgrade_form_wide detachedUpgrade">
+			<div class="container">
+				<div class="container">
+					<div class="row">
+						<div class="account_upgrade">
+							<p class="starSeries text-center">
+								<img src="img/icons/star.png" class="star" data-rating='1' />
+								<img src="img/icons/star.png" class="star" data-rating='2' />
+								<img src="img/icons/star.png" class="star" data-rating='3' />
+								<img src="img/icons/star.png" class="star" data-rating='4' />
+								<img src="img/icons/star.png" class="star" data-rating='5' />
+							</p>
+							<form class="feedBackForm" role="form">
+							  <div class="form-group text-left">
+								<label class="text-center">Your feedback (compliment, suggestion, or complaint):</label>
+								<textarea></textarea>
+							  </div>
+							  <!--<div class="form-group text-left">
+								<label for="practiceName" class="darkText noTransformText">From:</label>
+								<input type="text" class="form-control darkBorder" id="practiceName" placeholder="Practice Name">
+							  </div>-->
+							  <div class="form-group text-center">
+								<input type="submit" value="SEND FEEDBACK" class="generalButton btnBlue">
+							  </div>					  
+							</form>
+							<!-- End Account upgrade form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- Footer -->
+	<footer class="wide footerWide clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer">
+						<p class="rights">Copyright 2015 <a href="#" title="">ClinicSense</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer -->
+	
+</div>
+<!-- Wrapper end -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.js"></script>
+<script>
+$(document).ready(function(){
+	$('.star').on('click', function(){
+		var rate = $(this).attr('data-rating');
+		$('.star').each(function(){
+			var curr_rate = $(this).attr('data-rating');
+			//alert(curr_rate);
+			if(curr_rate<=rate){
+				$(this).attr('src', 'img/icons/star-active.png');
+				$('.star').unbind('mouseenter');
+				$('.star').unbind('mouseleave');
+			}
+			else{
+				$(this).attr('src', 'img/icons/star.png');
+			}
+			
+		});
+	});
+	
+	$('.star').on('mouseenter', function(){
+		var rate = $(this).attr('data-rating');
+		$('.star').each(function(){
+			var curr_rate = $(this).attr('data-rating');
+			//alert(curr_rate);
+			if(curr_rate<=rate){
+				$(this).attr('src', 'img/icons/star-active.png');
+			}
+			else{
+				$(this).attr('src', 'img/icons/star.png');
+			}
+			
+		});
+	});
+	
+	$('.star').on('mouseleave', function(){
+		var rate = $(this).attr('data-rating');
+		$('.star').each(function(){
+			var curr_rate = $(this).attr('data-rating');
+			//alert(curr_rate);
+			if(curr_rate<=rate){
+				$(this).attr('src', 'img/icons/star.png');
+			}
+			
+		});
+	});
+
+});
+
+</script>
+<!-- Script for detects HTML5 and CSS3 features in the user’s browser -->
+<script src="js/modernizr.js"></script>
+<!-- Include all compiled plugins, or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<!-- Script for custom select -->
+<script src="js/addOnsJS/customSelect.js"></script>
+<!-- Owl carousel -->
+<script src="js/owl-carousel/owl.carousel.js"></script>
+<!-- Script for custom script-->
+<script src="js/custom-script.js"></script>
+
+</body>
+</html>

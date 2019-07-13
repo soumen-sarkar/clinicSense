@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMTAO</title>
+
+
+<style>
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*=======================================================*/
+
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic);
+
+body, html{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	font-family: "Fira Sans", sans-serif;
+	background-color: #f2f9f9;
+}
+
+.wide{width: 100%; padding: 0; margin: 0;}
+.text-center{text-align: center;}
+.clearfix{clear: both;}
+.clearfix:before,
+.clearfix:after{
+  display: table;
+  content: " ";
+}
+.respo-img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.center-text{text-align: center;}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Fira Sans", sans-serif;
+	color: #312d2e;
+}
+p{
+	font-family: "Fira Sans", sans-serif;
+	color: #565656;
+	font-size: 16px;
+	margin-top: 26px;
+	line-height: 24px;
+}
+.wrapper{
+	width: 750px;
+	padding: 35px 17px 54px 17px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	background-color: #ffffff;
+}
+
+/* head area */
+img.logo{
+	display: inline-block;
+	margin-bottom: 24px;
+}
+
+/* intro text */
+.introText > p{/*font-weight: 700;*/ font-family: sans-serif;}
+
+/* features */
+.features h2,
+.programDetails h2{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 22px;
+	background-color: #259ad1;
+	padding: 10px 7px;
+	text-align: center;
+	margin-top: 58px;
+	margin-bottom: 30px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.featuresList{
+	clear: both;
+	overflow: auto;
+}
+.featuresList,
+.eachSenseFeature{
+	text-align: center;
+}
+.featuresList li{
+	width: 50%;
+	display: inline-block;
+	float: left;
+	clear: right;
+	margin-bottom: 18px;
+}
+.eachSenseFeature h3{
+	color: #231f20;
+	font-size: 21px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.eachSenseFeature p{
+	margin-top: 5px;
+	font-size: 15px;
+	max-width: 321px;
+	margin-left: auto;
+	margin-right: auto;
+}
+img.featIcon{
+	display: inline-block;
+}
+a.generalGreenBtn,
+a.generalGreenBtn:hover,
+a.generalGreenBtn:active,
+.generalGreenBtn,
+.generalGreenBtn:hover,
+.generalGreenBtn:focus{
+	display: inline-block;
+	text-decoration: none;
+	outline: none;
+	background-color: #5ed164;
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 400;
+	padding: 15px 38px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	text-align: center;
+	vertical-align: middle;
+	height: auto;
+}
+.largeBtn,
+.largeBtn:hover,
+.largeBtn:active,
+.largeBtn:focus{
+	min-width: 222px;
+	box-sizing: border-box;
+}
+
+a.generalGreenBtn:hover,
+a.generalGreenBtn:active,
+.generalGreenBtn:hover,
+.generalGreenBtn:focus{
+	background-color: #1cc925;
+}
+
+.features p{
+	text-align: center;
+}
+
+/* programDetails */
+ul.pointList{
+	text-align: center;
+	font-family: "Fira Sans", sans-serif;
+}
+ul.pointList li{
+	margin-bottom: 33px;
+}
+ul.pointList li span.digitMarker{
+	display: inline-block;
+	font-size: 42px;
+	font-weight: bold;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	background-color: #259ad1;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding-top: 9px;
+}
+ul.pointList li p{
+	font-size: 17px;
+	color: #565656;
+	max-width: 580px;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul.pointList li:nth-child(2) p{
+	max-width: 433px;
+}
+ul.pointList li:nth-child(3) p{
+	max-width: 408px;
+}
+ul.pointList li p span{
+	font-weight: bold;
+}
+
+/* plans */
+.planArea{
+	overflow: auto;
+	margin-top: 18px;
+}
+.eachPlanArea p{
+	margin: 0;
+}
+.popBg{
+	background-color: #e4f8fe;
+}
+.eachPlanArea{
+	text-align: center;
+	box-sizing: border-box;
+	width: 33%;
+	float: left;
+	clear: right;
+}
+p.popularityLabel{
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding: 12px 31px;
+	text-align: center;
+	background-color: #e1e1e1;
+	font-weight: bold;
+}
+p.popular{
+	background-color: #0078a2;
+	color: #fff;
+}
+.fameAndMoney{
+	padding-top: 5px;
+	padding-bottom: 29px;
+}
+p.planName{
+	font-size: 35px;
+	text-transform: uppercase;
+	color: #000000;
+	margin-top: 10px;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+p.lessPrice{
+	font-weight: bold;
+	color: #959595;
+	text-transform: uppercase;
+	font-size: 17px;
+	text-decoration: line-through;
+	margin-bottom: 14px;
+}
+p.originalPrice{
+	color: #2f9ed3;
+	font-weight: bold;
+	font-size: 23px;
+	text-transform: uppercase;
+}
+p.practitionerNos,
+p.addonProfit{
+	font-size: 14px;
+	color: #fff;
+	background-color: #0078a2;
+	padding: 2px 3px;
+}
+p.addonProfit{
+	margin-top: 2px;
+	background-color: #41bee7;
+}
+p.addonProfit span{
+	font-weight: bold;
+	font-style: italic;
+}
+.planFeatures{
+	padding-top: 10px;
+	min-height: 370px;
+}
+.planFeatures li{
+	color: #555555;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 11px 3px;
+	border-bottom: 1px solid #d2d2d2;
+}
+ul.popBg li{color: #000000;}
+.planFeatures li:last-child{
+	border-bottom: none;
+}
+.blurryText,
+.blurryText a,
+.blurryText a:hover,
+.blurryText li{
+   color: transparent !important;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5) !important;
+}
+.planBody,
+.fameAndMoney{border-left: 2px solid #fff;}
+li.comingSoonText{
+	text-transform: uppercase;
+	color: #0078a2 !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	text-shadow: none !important;
+	padding-top: 15px !important;
+}
+p.freeTrialGo{
+	margin-top: 32px !important;
+	float: left;
+	width: 100%;
+}
+p.freeTrialGo .generalGreenBtn{margin-left: -5px;}
+p.noHiddenCost{
+	color: #0078a2;
+	font-size: 16px;
+	width: 100%;
+	font-weight: 600;
+	margin: 45px auto;
+	float: left;
+}
+
+/* foot notes */
+.footNotes{
+	background-color: #ebebeb;
+	box-sizing: border-box;
+	padding: 11px 17px 37px 17px;
+	margin-top: 33px;
+}
+.footNotes p{
+	font-family: sans-serif;
+	font-size: 16px;
+	/*font-weight: bold;*/
+	color: #565656;
+}
+.footNotes a,
+.footNotes a:hover,
+.footNotes a:active{
+	font-size: 15px;
+	color: #0078a2;
+}
+
+/*========== Media Queries ==========*/
+/*Extra small device (XS)*/
+@media (max-width: 768px) {
+	.wrapper{
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.featuresList li,
+	.eachPlanArea{
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+	.eachSenseFeature p{
+		max-width: 470px;
+		margin-top: 24px;
+	}
+	.eachPlanArea{
+		margin-bottom: 33px;
+		border-bottom: 2px solid #ccc;
+	}
+	.planFeatures{
+		min-height: auto;
+	}
+}
+@media (max-width: 480px) {
+	img.logo{
+		max-width: 150px;
+		margin-bottom: 0;
+	}
+}
+</style>
+<!-- End Styles -->
+
+</head>
+<body>
+<!-- Wrapper start -->
+<div class="wrapper">
+	
+	<!-- head area -->
+	<section class="wide headArea text-center clearfix">
+		<img src="logo.png" class="logo respo-img" />
+	</section>
+	<!-- end head area -->
+	
+	<!-- entry text -->
+	<section class="wide introText clearfix">
+		<p>The Registered Massage Therapists’ Association of Ontario has partnered with ClinicSense (based in Toronto) to provide RMTAO members a modern practice management software system at discounted rates.</p>
+		<p>ClinicSense helps eliminate paperwork, so you can stay organized and have more time to treat clients and do the things that you love. Additionally, their email marketing tools help you attract new clients and have them rebook often.</p> 
+	</section>
+	<!-- end hero text -->
+	
+	<!-- features -->
+	<section class="wide features clearfix">
+		<h2>The incredibly easy-to-use software offers:</h2>
+		<ul class="featuresList">
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="icon-soap.jpg" class="featIcon respo-img" /></p>
+					<h3>ONLINE SOAP NOTES</h3>
+					<p>With clinicSense you type your appointment notes directly into the client record for quick and easy accessibility in the future.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="intake-forms.jpg" class="featIcon respo-img" /></p>
+					<h3>ONLINE INTAKE FORMS</h3>
+					<p>ClinicSense emails a secure, online intake form to new clients to fill out before coming to your office, and uploads it to your client records.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="appointment.jpg" class="featIcon respo-img" /></p>
+					<h3>APPOINTMENT SCHEDULING</h3>
+					<p>Accessible from everywhere, your online calendar adds convenience when you're out of the clinic. Plus, your clients can book their own appointment online.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="payments.jpg" class="featIcon respo-img" /></p>
+					<h3>TAKE PAYMENTS</h3>
+					<p>Securely charge credit cards directly in ClinicSense. Optionally ask clients to prepay or just save their credit card number when they book online.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="giftcards.jpg" class="featIcon respo-img" /></p>
+					<h3>SELL GIFT CERTIFICATES</h3>
+					<p>Sell, manage, & promote gift certificates sales with ClinicSense. Add the "Buy Gift Certificate" button to your website to drive online sales.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="reminders.jpg" class="featIcon respo-img" /></p>
+					<h3>EMAIL & TEXT REMINDERS</h3>
+					<p>ClinicSense automatically sends out appointment reminders. It's totally hands off for you and really helps reduce no-shows.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="email-marketing.jpg" class="featIcon respo-img" /></p>
+					<h3>EMAIL MARKETING</h3>
+					<p>Use ClinicSense to send email campaigns to your clients. Optionally include a promo code to boost sales.</p>
+				</div>
+			</li>
+			<li>
+				<div class="eachSenseFeature">
+					<p><img src="birthday-promo.jpg" class="featIcon respo-img" /></p>
+					<h3>BIRTHDAY PROMO</h3>
+					<p>ClinicSense can automatically email your clients on their birthday. Optionally include a birthday promotion like $10 off their next treatment.</p>
+				</div>
+			</li>
+		</ul>
+		<p><a href="#" class="generalGreenBtn largeBtn">Take The Full Tour</a></p>
+	</section> 
+	<!-- end features -->
+	
+	<!-- program details -->
+	<section class="wide programDetails clearfix">
+		<h2>Here’s what this program delivers:</h2>
+		<!-- Point List -->
+		<ul class="pointList clearfix">
+			<li>
+				<span class="digitMarker">1</span>
+				<p>A free <span>14-day free trial</span> to see if ClinicSense is a good fit for your business.</p>
+			</li>
+			<li>
+				<span class="digitMarker">2</span>
+				<p>An <span>introductory phone call</span> so you can meet a member of the ClinicSense team and ask questions.
+</p>
+			</li>
+			<li>
+				<span class="digitMarker">3</span>
+				<p>RMTAO "Member Only" <span>discounted rates</span> as follows:</p>
+			</li>
+		</ul>
+		<!-- End Point List -->
+	</section>
+	<!-- end program details -->
+	
+	<!-- planArea -->
+	<div class="wide planArea clearfix">
+		
+		<!-- Each Plan -->
+		<div class="eachPlanArea">
+			<!-- plan Header -->
+			<div class="planHeader">
+				<p class="popularityLabel">&nbsp;</p>
+				<div class="fameAndMoney">
+					<p class="planName">SOLO</p>
+					<p class="lessPrice">$29 / MONTH</p>
+					<p class="originalPrice">$25 / MONTH</p>
+				</div>
+			</div>
+			<!-- End Plan Header -->
+			
+			<!-- planBody -->
+			<div class="planBody">
+				<p class="practitionerNos">Single Practitioner</p>
+				<p class="addonProfit">&nbsp;</p>
+				<ul class="planFeatures">
+					<li>SOAP Notes</li>
+					<li>Intake Forms</li>
+					<li>Client Health & Treatment History</li>
+					<li>Online Appointment Scheduling</li>
+					<li>Email Appoinment Reminders</li>
+					<li>Take Payments</li>
+					<li>Google Calendar Sync</li>
+					<li>Tablet & Phone Access</li>
+					<li>Introductory Phone Call</li>
+					<li>Email Support</li>
+				</ul>
+			</div>
+			<!--End planBody -->
+		</div>
+		<!-- End Each Plan -->
+		
+		<!-- Each Plan -->
+		<div class="eachPlanArea">
+			<!-- plan Header -->
+			<div class="planHeader">
+				<p class="popularityLabel popular">MOST POPULAR</p>
+				<div class="fameAndMoney popBg">
+					<p class="planName">GROW</p>
+					<p class="lessPrice">$59 / MONTH</p>
+					<p class="originalPrice">$49 / MONTH</p>
+				</div>
+			</div>
+			<!-- End Plan Header -->
+			
+			<!-- planBody -->
+			<div class="planBody">
+				<p class="practitionerNos">Multiple Practitioners</p>
+				<p class="addonProfit">Everything on the solo plan<span>, plus:</span></p>
+				<ul class="planFeatures popBg">
+					<li>Automated Rebooking Requests</li>
+					<li>Sell & Manage Gift Certificates</li>
+					<li>Send Email Campaigns to Clients</li>
+					<li>Automatic Birthday Emails</li>
+					<li>Send Holiday Promotions</li>
+					<li>Credit Card Capture To Hold Appointments</li>
+					<li>Prepaid Appointments</li>
+					<li>Text Message Appointment Reminders</li>
+					<li>Phone Support</li>
+				</ul>
+			</div>
+			<!--End planBody -->
+		</div>
+		<!-- End Each Plan -->
+		
+		<!-- Each Plan -->
+		<div class="eachPlanArea">
+			<!-- plan Header -->
+			<div class="planHeader">
+				<p class="popularityLabel">&nbsp;</p>
+				<div class="fameAndMoney">
+					<p class="planName">PRO</p>
+					<p class="lessPrice">$99 / MONTH</p>
+					<p class="originalPrice">$89 / MONTH</p>
+				</div>
+			</div>
+			<!-- End Plan Header -->
+			
+			<!-- planBody -->
+			<div class="planBody">
+				<p class="practitionerNos">Multiple Practitioners</p>
+				<p class="addonProfit">Everything on the grow plan<span>, plus:</span></p>
+				<ul class="planFeatures">
+					<li class="blurryText">Advanced Reports</li>
+					<li class="blurryText">Sell Products</li>
+					<li class="blurryText">Inventory Management</li>
+					<li class="blurryText">Sell Monthly Memberships</li>
+					<li class="blurryText">Loyalty Rewards Program</li>
+					<li class="comingSoonText">COMING SOON</li>
+				</ul>
+				
+			</div>
+			<!--End planBody -->
+		</div>
+		<!-- End Each Plan -->
+		
+		<p class="center-text freeTrialGo"><a href="#" class="generalGreenBtn largeBtn">Start Free Trial</a></p>
+		<p class="center-text noHiddenCost">No hidden costs. No contracts. Cancel any time.<br/> 
+Further savings available on annual plans – 1 month free!</p>
+	</div>
+	<!-- end Plan Area -->
+	
+	<!-- program details -->
+	<section class="wide programDetails programDetailsContinued clearfix">
+		<!-- Point List -->
+		<ul class="pointList clearfix">
+			<li>
+				<span class="digitMarker">4</span>
+				<p>No charge support services. Call or email ClinicSense with your questions. Guaranteed response – <span>support@clinicsense.com or 1-888-580-0009.</span></p>
+			</li>
+		</ul>
+		<!-- End Point List -->
+	</section>
+	<!-- end program details -->
+	
+	<!-- foot notes -->
+	<section class="wide footNotes clearfix">
+		<p>Please be advised that in order to enroll in the program you must be a member of the RMTAO in good standing and purchase the program from the RMTAO. In order to enroll in this program, you will have to pay a one-time enrollment fee or $25. </p>
+		<p>The RMTAO’s role in this program is purely as a facilitator; we have negotiated a group discount for all RMTAO members participating in this program. The resulting business relationship is solely between you, the practitioner, and ClinicSense.</p>
+		<p>To learn more about ClinicSense or to schedule an online demo, visit <a href="#">www.ClinicSense.com.</a></p>
+	</section>
+	<!-- end foot notes -->
+	
+</div>
+<!-- Wrapper end -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+<script src="jquery-1.11.0.js"></script>-->
+<!-- Script for detects HTML5 and CSS3 features in the user’s browser
+<script src="modernizr.js"></script> -->
+</body>
+</html>
